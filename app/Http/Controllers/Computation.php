@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Log;
 
 class Computation extends Controller
 {
@@ -21,6 +22,28 @@ class Computation extends Controller
         $sum *= 4;
         return response()->json([
             'pi' => $sum,
+        ]);
+    }
+
+    public function calculateNumericalIntegration(Request $request) {
+        $functionString = $request->get('function');
+        Log::info($functionString);
+        $lambda = create_function('$x', 'return ' . $functionString . ';');
+        $width = $request->get('width');
+        $from = $request->get('from');
+        $to = $request->get('to');
+
+        $numRectangles = ($to - $from)/$width;
+        $sum = 0;
+        $x = $from;
+
+        while($x < $to) {
+            $sum += $width * $lambda($x);
+            $x += $width;
+        }
+
+        return response()->json([
+            'sum' => $sum,
         ]);
     }
 }

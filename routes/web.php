@@ -19,4 +19,10 @@ Route::get('/pi', function () {
     return view('pi');
 });
 
+Route::get('/integrate', function() {
+    return view('integration');
+});
+
 Route::post('/calcPi', 'Computation@calculatePi');
+
+Route::post('/calcNumericalIntegration', 'Computation@calculateNumericalIntegration');
