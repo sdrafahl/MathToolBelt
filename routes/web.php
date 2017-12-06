@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pi', function () {
+    return view('pi');
+});
+
+Route::post('/calcPi', 'Computation@calculatePi');
