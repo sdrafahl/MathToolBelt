@@ -24,7 +24,6 @@
         <button type="button" onclick="calc()">Compute</button>
         <br>
         <textarea id="value" rows="4" cols="50"></textarea>
-
     </body>
 
 </html>

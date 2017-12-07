@@ -46,4 +46,24 @@ class Computation extends Controller
             'sum' => $sum,
         ]);
     }
+
+    public function matrixSum(Request $request) {
+
+        $alphabet = array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+        "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
+
+        $height = $request->get('height');
+        $width = $request->get('width');
+        $sum = 0;
+
+        for($x = 0; $x <= $height;$x++) {
+            for($y = 1; $y <= $width;$y++) {
+                $sum += $request->get($y . $alphabet[$x]);
+            }
+        }
+        Log::info($request);
+        return response()->json([
+            'sum' => $sum,
+        ]);
+    }
 }

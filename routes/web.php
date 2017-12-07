@@ -23,6 +23,12 @@ Route::get('/integrate', function() {
     return view('integration');
 });
 
+Route::get('/matrix', function() {
+    return view('matrix');
+});
+
 Route::post('/calcPi', 'Computation@calculatePi');
 
 Route::post('/calcNumericalIntegration', 'Computation@calculateNumericalIntegration');
+
+Route::post('/calcMatrixSum', 'Computation@matrixSum');
