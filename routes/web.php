@@ -10,11 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/pi', function () {
     return view('pi');
 });
@@ -31,8 +26,14 @@ Route::get('/matrix', function() {
     return view('matrix');
 });
 
+Route::get('/prime', function() {
+    return view('prime');
+});
+
 Route::post('/calcPi', 'Computation@calculatePi');
 
 Route::post('/calcNumericalIntegration', 'Computation@calculateNumericalIntegration');
 
 Route::post('/calcMatrixSum', 'Computation@matrixSum');
+
+Route::post('/calcPrime', 'Computation@prime');

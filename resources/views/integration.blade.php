@@ -6,7 +6,12 @@
         <script type="text/javascript" src="{{ URL::asset('js/integration.js') }}"></script>
     </head>
     <body>
-        <b> Numerical Integration <b>
+        <a href="/pi">Calculate Pi</a>
+        <a href="/graph">Graph</a>
+        <a href="/matrix">Matrix</a>
+        <a href="/prime">Prime</a>
+        <br>
+        <h2> Numerical Integration </h2>
         <br>
         <br>
         Use x as a variable

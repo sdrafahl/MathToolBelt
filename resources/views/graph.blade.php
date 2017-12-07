@@ -6,6 +6,13 @@
         <script type="text/javascript" src="{{ URL::asset('js/graph.js') }}"></script>
     </head>
     <body>
+        <a href="/pi">Calculate Pi</a>
+        <a href="/integrate">Integrate</a>
+        <a href="/matrix">Matrix</a>
+        <a href="/prime">Prime</a>
+        <br>
+        <h2> Graph Drawing </h2>
+        <br>
         <canvas id="myCanvas" width="1000" height="1000"
            style="border:1px solid #c3c3c3;">
            Your browser does not support the canvas element.

@@ -6,6 +6,11 @@
         <script type="text/javascript" src="{{ URL::asset('js/matrix.js') }}"></script>
     </head>
     <body>
+        <a href="/pi">Calculate Pi</a>
+        <a href="/integrate">Integrate</a>
+        <a href="/graph">Graph</a>
+        <a href="/prime">Matrix</a>
+        <br>
         <h2>Matrix Computation </h2>
 
         <table style="width:100%" id="table1">

@@ -61,10 +61,49 @@ class Computation extends Controller
                 $sum += $request->get($y . $alphabet[$x]);
             }
         }
-        
+
         Log::info($request);
         return response()->json([
             'sum' => $sum,
+        ]);
+    }
+
+    public function prime(Request $request) {
+        $val = $request->get('val');
+        if($val == 2) {
+            return response()->json([
+                'prime' => 'true',
+            ]);
+        }
+        if($val == 3) {
+            return response()->json([
+                'prime' => 'true',
+            ]);
+        }
+        if($val % 2 == 0) {
+            return response()->json([
+                'prime' => 'false',
+            ]);
+        }
+        if($val % 3 == 0) {
+            return response()->json([
+                'prime' => 'false',
+            ]);
+        }
+        $i = 5;
+        $w = 2;
+
+        while($i * $i <= $val) {
+            if($val % $i == 0) {
+                return response()->json([
+                    'prime' => 'false',
+                ]);
+            }
+            $i += $w;
+            $w = 6 - $w;
+        }
+        return response()->json([
+            'prime' => 'true',
         ]);
     }
 }
