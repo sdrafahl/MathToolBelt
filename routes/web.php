@@ -23,6 +23,10 @@ Route::get('/integrate', function() {
     return view('integration');
 });
 
+Route::get('/graph', function() {
+    return view('graph');
+});
+
 Route::get('/matrix', function() {
     return view('matrix');
 });

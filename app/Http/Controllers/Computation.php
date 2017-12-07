@@ -61,6 +61,7 @@ class Computation extends Controller
                 $sum += $request->get($y . $alphabet[$x]);
             }
         }
+        
         Log::info($request);
         return response()->json([
             'sum' => $sum,
