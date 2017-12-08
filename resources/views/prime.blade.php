@@ -9,7 +9,7 @@
         <a href="/integrate">Integrate</a>
         <a href="/graph">Graph</a>
         <a href="/matrix">Matrix</a>
-        <a href="/prime">Prime</a>
+        <a href="/pi">Calculate Pi</a>
         <br>
         <h2>Prime Number Test </h2>
         <br>
