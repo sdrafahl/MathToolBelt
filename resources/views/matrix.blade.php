@@ -32,7 +32,7 @@
         </table>
         <br>
         <button onclick="addRows()"> Add Row </button>
-        <button onclick="addColumns()"> Add Row </button>
+        <button onclick="addColumns()"> Add Column </button>
         <br>
         <br>
         <textarea id="sumBox" rows="4" cols="50"></textarea>
